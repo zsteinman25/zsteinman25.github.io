@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.75;
+    color: #2B3A67;
+    background: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Header */
+.site-header {
+    background: #7CA982;
+    padding: 10px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+.main-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main-nav a:hover {
+    color: #2B3A67;
+}
+
+/* Hamburger */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* About Page */
+.about-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.about-image img {
+    width: 250px;
+    border-radius: 12px;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.contact-section .container {
+    background: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#contactForm button {
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.success-message {
+    display: none;
+    margin-top: 10px;
+    color: green;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: #7CA982;
+        display: none;
+        padding: 15px 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle:checked + .hamburger + .main-nav {
+        display: block;
+    }
+
+    .contact-section .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== HOME PAGE ===== */
+main {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+    font-size: 50px;
+}
+
+/* ===== COURSES PAGE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== RESUME PAGE ===== */
+iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+}
+
+/* Resume download button */
+button {
+    padding: 10px 20px;
+    margin: 20px;
+    border: none;
+    background: #7CA982;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+    background: #7CA982;
+    color: white;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Resume page layout */
+.resume-page {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Resume viewer */
+.resume-page iframe {
+    width: 100%;
+    height: 1100px;
+    border: none;
+}
+
+/* Download button */
+.resume-download {
+    margin-top: 30px;
+}
+
+.resume-download button {
+    padding: 14px 28px;
+    font-size: 16px;
+    background: #7CA982;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.resume-download button:hover {
+    background: #678f6d;
+}
+
+/* ===== COURSES PAGE ===== */
+
+.courses-page main {
+    display: block;
+    height: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.courses-page table {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.courses-page td {
+    padding: 25px;
+    vertical-align: top;
+    text-align: left;
+}
